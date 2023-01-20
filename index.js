@@ -18,7 +18,7 @@ const configuration = new Configuration({
   organization: process.env.OPENAI_ORG,
   apiKey: process.env.OPENAI_KEY,
 });
-const openai = new OpenAIApi(configuration);
+const openai = new OpenAIApi({apiKey: process.env.OPENAI_KEY || configuration.apiKey});
 
 // Check for when a message on discord is sent
 
