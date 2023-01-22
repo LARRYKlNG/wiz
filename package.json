@@ -1,26 +1,27 @@
+
 {
   "name": "wiz",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Discord bot that uses OpenAI to generate responses",
   "main": "bot.js",
   "scripts": {
-    "start": "bot.js"
+    "start": "node bot.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LARRYKlNG/wiz.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [" "],
+  "author": "Larry Klng",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/LARRYKlNG/wiz/issues"
   },
   "homepage": "https://github.com/LARRYKlNG/wiz#readme",
   "dependencies": {
-    "discord.js": "^14.7.1",
-    "dotenv": "^16.0.3",
-    "node:events": "^0.0.2",
-    "openai": "^3.1.0"
+    "discord.js": "latest",
+    "dotenv": "latest",
+    "openai": "latest",
+    "npm": "^9.3.0"
   }
 }
