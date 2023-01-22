@@ -20,7 +20,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi({ apiKey: process.env.OPENAI_KEY || configuration.apiKey });
 
 // Check for when a message on discord is sent
-client.on("messageCreate", async function (message)
+client.on("messageCreate", async function (message) {
   // Check if message starts with "$"
   if (!message.content.startsWith("$")) return;
   // Remove the "$" prefix from the message
@@ -31,7 +31,11 @@ client.on("messageCreate", async function (message)
       prompt: command,
       model: "text-davinci-002",
     });
-    message.reply(response.choices[0].text
-      });
+    message.reply(response.choices[0].text);
+  } catch (err) {
+    console.log(err);
+  }
+});
+
 // Log the bot into Discord
 client.login(process.env.DISCORD_TOKEN);
